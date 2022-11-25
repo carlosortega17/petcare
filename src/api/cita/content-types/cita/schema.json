@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "citas",
+  "info": {
+    "singularName": "cita",
+    "pluralName": "citas",
+    "displayName": "cita",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "mascota": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mascota.mascota"
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "horario_cita": {
+      "type": "date"
+    },
+    "doctor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "hora": {
+      "type": "string"
+    }
+  }
+}
